@@ -3,14 +3,16 @@ import './CambiarContraseña.css';
 import Header from './Header';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 
 const CambiarContraseña = () => {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Se ha enviado un enlace a: ${email}`);
-    
+    navigate('/');
   };
 
   return (
